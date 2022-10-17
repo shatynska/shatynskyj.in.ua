@@ -11,7 +11,9 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.docker.network=proxy"
-      - "traefik.http.routers.shatynskyj.rule=Host(`shatynskyj.psypra.com`)"
+      - "traefik.http.routers.shatynskyj.rule=Host(`shatynskyj.in.ua`)"
+      - "traefik.http.routers.shatynskyj.tls=true"
+      - "traefik.http.routers.shatynskyj.tls.certresolver=letsEncrypt"
     networks:
       - proxy
       - default
