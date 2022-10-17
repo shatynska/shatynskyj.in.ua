@@ -11,7 +11,10 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.docker.network=proxy"
+      - "traefik.http.routers.shatynskyj.entrypoints=https"
       - "traefik.http.routers.shatynskyj.rule=Host(`shatynskyj.in.ua.localhost`)"
+      - "traefik.http.routers.shatynskyj.tls=true"
+      - "traefik.http.routers.shatynskyj.tls.certresolver=letsEncrypt"
     networks:
       - proxy
       - default
