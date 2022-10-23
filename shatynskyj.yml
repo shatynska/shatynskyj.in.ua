@@ -23,59 +23,15 @@ services:
       - app
     container_name: shatynskyj_nginx
 
-  
-
   app:
-    image: thecodingmachine/php:8.1-fpm
-    container_name: shatynskyj_app
-    networks:
-      - traefik-public
+    build:
+      context: .
+      dockerfile: _docker/app/Dockerfile
     volumes:
       - ./:/var/www
-    ports :
-    - 9000:9000
+    user: 1000:1000
+    container_name: shatynskyj_app
     restart: unless-stopped
-    depends_on:
-    - db
-    links:
-    - db:db
-    environment:
-      MYSQL_DB_HOST: db  
-      MYSQL_DATABASE: laravel
-      MYSQL_USER: root
-      MYSQL_PASSWORD: root
-
-  db:
-    image: docker.io/mysql:8.0
-    container_name: shatynskyj_db
-    command: mysqld --character-set-server=utf8 --collation-server=utf8_general_ci
-    networks:
-      - traefik-public
-    restart: unless-stopped
-    volumes:
-      - ./tmp/db:/var/lib/mysql
-    environment:
-      MYSQL_DATABASE: laravel
-      MYSQL_USER: root
-      MYSQL_PASSWORD: root
-      MYSQL_ROOT_PASSWORD: root
-    ports:
-      - "8103:3306" 
-
-  phpmyadmin:
-    image: phpmyadmin/phpmyadmin
-    container_name: shatynskyj_phpmyadmin
-    depends_on:
-      - db
-    networks:
-      - traefik-public
-    restart: always
-    ports:
-      - '8090:80'   
-    environment:
-      MYSQL_DB_HOST: db  
-      MYSQL_USER: root
-      MYSQL_PASSWORD: root
 
 networks:
   traefik-public:
