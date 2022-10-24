@@ -12,16 +12,13 @@ services:
       - 8875:80
     labels:
       - "traefik.enable=true"
-      - "traefik.docker.network=proxy"
-      - "traefik.http.routers.shatynskyj.entrypoints=https"
+      - "traefik.http.routers.shatynskyj.entrypoints=websecure"
       - "traefik.http.routers.shatynskyj.rule=Host(`shatynskyj.in.ua`)"
       - "traefik.http.routers.shatynskyj.tls=true"
-      - "traefik.http.routers.shatynskyj.tls.certresolver=letsEncrypt"
+      - "traefik.http.routers.shatynskyj.tls.certresolver=leresolver"
     networks:
       - traefik-public
     container_name: shatynskyj_nginx
-
-  
 
 networks:
   traefik-public:
