@@ -15,8 +15,7 @@ services:
     container_name: shatynskyj_nginx
 
   app:
-    image: 127.0.0.1:5000/test
-    build: .
+    image: php:8.1-fpm
     volumes:
       - ./:/var/www
     user: 1000:1000

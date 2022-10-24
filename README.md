@@ -1,1 +1,0 @@
-# shatynskyj.in.ua
