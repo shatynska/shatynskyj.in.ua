@@ -1,15 +1,13 @@
-version: "3.1"
+version: '3.7'
 
 services:
-
   nginx:
     image: nginx:latest
-    restart: unless-stopped
     volumes:
       - ./:/var/www
       - ./_docker/nginx/conf.d:/etc/nginx/conf.d
     ports:
-      - 8875:80
+      - 8874:80
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.shatynskyj.entrypoints=websecure"
@@ -18,7 +16,19 @@ services:
       - "traefik.http.routers.shatynskyj.tls.certresolver=leresolver"
     networks:
       - traefik-public
+    depends_on:
+      - app
     container_name: shatynskyj_nginx
+
+  app:
+    image: getaniftywebsite/php:latest
+    volumes:
+      - ./:/var/www
+      - ./_docker/app/php.ini:/usr/local/etc/php/conf.d/php.ini
+    user: 1000:1000
+    networks:
+      - traefik-public
+    container_name: shatynskyj_app
 
 networks:
   traefik-public:
