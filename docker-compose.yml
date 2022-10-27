@@ -10,12 +10,13 @@ services:
       - 8874:80
     labels:
       - "traefik.enable=true"
+      - "traefik.docker.network=traefik-public"
       - "traefik.http.routers.shatynskyj.entrypoints=https"
-      - "traefik.http.routers.shatynskyj.rule=Host(`shatynskyj.in.ua.localhost`)"
+      - "traefik.http.routers.shatynskyj.rule=Host(`shatynskyj.localhost`)"
       - "traefik.http.routers.shatynskyj.tls=true"
       - "traefik.http.routers.shatynskyj.tls.certresolver=letsEncrypt"
     networks:
-      - proxy
+      - traefik-public
     depends_on:
       - app
     container_name: shatynskyj_nginx
@@ -27,12 +28,9 @@ services:
       - ./_docker/app/php.ini:/usr/local/etc/php/conf.d/php.ini
     user: 1000:1000
     networks:
-      - proxy
+      - traefik-public
     container_name: shatynskyj_app
 
 networks:
-  proxy:
+  traefik-public:
     external: true
-
-
-
