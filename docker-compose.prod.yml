@@ -7,7 +7,7 @@ services:
       - ./:/var/www
       - ./_docker/nginx/conf.d:/etc/nginx/conf.d
     ports:
-      - 8874:80
+      - 8081:80
     labels:
       - "traefik.enable=true"
       - "traefik.docker.network=traefik-public"
@@ -17,6 +17,7 @@ services:
       - "traefik.http.routers.shatynskyj.tls.certresolver=letsEncrypt"
     networks:
       - traefik-public
+      - default
     depends_on:
       - app
     container_name: shatynskyj_nginx
@@ -26,13 +27,13 @@ services:
     volumes:
       - ./:/var/www
       - ./_docker/app/php.ini:/usr/local/etc/php/conf.d/php.ini
-    user: 1000:1000
     networks:
-      - traefik-public
+      - default
     container_name: shatynskyj_app
 
 networks:
   traefik-public:
     external: true
+  default:
 
 
