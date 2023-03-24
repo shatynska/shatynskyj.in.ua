@@ -10,6 +10,13 @@
 		body {
 			padding: 0;
 			margin: 0;
+			background-color: #1C1C1C;
+			color: #ffffff;
+		}
+
+		a {
+			color: #ffffff;
+			text-decoration: none;
 		}
 
 		.container {
