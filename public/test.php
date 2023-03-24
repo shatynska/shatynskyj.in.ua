@@ -20,7 +20,6 @@
 		}
 
 		.container {
-			width: 1420px;
 			margin: 0 auto;
 			display: grid;
 			grid-template-areas: 'top top top' 'left center right' 'footer footer footer';
@@ -31,7 +30,9 @@
 		.top {
 			grid-area: top;
 			margin: 0 auto;
-			background: no-repeat center url("images/sky-fon.jpg");
+			height: 320px;
+			width: 100%;
+			background: no-repeat top center url("images/sky-fon.jpg");
 		}
 
 		header {
@@ -48,7 +49,7 @@
 <body>
 	<div class="container">
 		<div class="top">
-			<img src="images/sky-fon.jpg" alt="" srcset="">
+			<!-- <img src="images/sky-fon.jpg" alt=""> -->
 		</div>
 
 		<header>
