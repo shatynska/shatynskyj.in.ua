@@ -54,11 +54,27 @@
 
 		<div id="left">
 			<div class="main">
+				<?
+				$projects = [240, 130, 50, 250, 150, 40, 60, 200, 220, 70, 100, 80];
+				for ($i = 0; $i <= count($projects) - 1; $i++) {
+					echo '<div class="card">
+					<a href="project.php?id=' . $projects[$i] . '"><img src="projects/' . $projects[$i] . '/z1.jpg"></a>
+					</div>';
+				}
+				?>
 			</div>
 		</div>
 
 		<div id="right">
 			<div class="main">
+				<?
+				$projects = [20, 30, 140, 120, 210, 160, 170, 180, 230, 190, 110, 90];
+				for ($i = 0; $i <= count($projects) - 1; $i++) {
+					echo '<div class="card">
+					<a href="project.php?id=' . $projects[$i] . '"><img src="projects/' . $projects[$i] . '/z1.jpg"></a>
+					</div>';
+				}
+				?>
 			</div>
 		</div>
 

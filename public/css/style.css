@@ -2,20 +2,24 @@
 
 body {
   background-color: rgba(28, 28, 28, 1);
+  color: rgba(255, 255, 255, 1);
   font-family: "Manrope", sans-serif;
   font-size: 16px;
-  color: rgba(255, 255, 255, 1);
 }
 
 header {
-  grid-area: center;
-  text-align: center;
-  background-color: rgba(63, 67, 70, 1);
-  color: rgba(255, 255, 255, 1);
+  grid-area: header;
+  position: sticky;
+  align-self: start;
+  top: 0;
+  min-height: 100vh;
   padding: 20px;
   display: flex;
   flex-direction: column;
   gap: 32px;
+  background-color: rgba(63, 67, 70, 1);
+  color: rgba(255, 255, 255, 1);
+  text-align: center;
 }
 
 header address {
@@ -31,7 +35,6 @@ footer {
 
 a {
   color: #ffffff;
-  text-decoration: none;
 }
 
 h1 {
@@ -44,7 +47,7 @@ h1 {
   display: grid;
   grid-template-areas:
     "top top top"
-    "left center right"
+    "left header right"
     "footer footer footer";
   grid-template-columns: 1fr 232px 1fr;
   grid-template-rows: 340px 1fr 24px;
@@ -61,6 +64,12 @@ h1 {
   background: no-repeat top center url("../images/sky-fon.jpg");
 }
 
+#company_title {
+  font-family: "Russo One", sans-serif;
+  font-size: 40px;
+  line-height: 40px;
+}
+
 #left {
   grid-area: left;
   margin-left: 40px;
@@ -72,14 +81,20 @@ h1 {
 }
 
 .main {
-  background-color: rgba(255, 255, 255, 1);
+  background-color: rgba(194, 195, 197, 1);
   color: rgba(28, 28, 28, 1);
   margin-top: 40px;
-  padding: 20px;
+  padding: 60px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 40px 20px;
 }
 
-#company_title {
-  font-family: "Russo One", sans-serif;
-  font-size: 40px;
-  line-height: 40px;
+.card {
+  max-width: 230px;
+  min-width: 200px;
+}
+.card img {
+  filter: grayscale(60%);
 }
