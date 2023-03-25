@@ -112,5 +112,5 @@ h1 {
   max-width: 220px;
 }
 .card img {
-  filter: grayscale(60%);
+  filter: grayscale(40%);
 }

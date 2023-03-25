@@ -19,7 +19,6 @@ a:visited {
   display: inline-block;
 }
 
-
 body {
   min-height: 100vh;
   scroll-behavior: smooth;
@@ -53,7 +52,6 @@ ul li {
 }
 
 img {
-  vertical-align: top;
   display: block;
 }
 

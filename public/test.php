@@ -31,14 +31,8 @@
 				та&nbspінші ковані вироби
 			</div>
 
-			<div>
-				Володимир&nbspШатинський
-			</div>
 
 			<address>
-				<div>
-					м.&nbspДрогобич
-				</div>
 				<div>
 					<a href="tel:+380689611663" id="tel">
 						+380689611663
@@ -49,7 +43,13 @@
 						shatynskyj@gmail.com
 					</a>
 				</div>
+				<div>
+					м.&nbspДрогобич
+				</div>
 			</address>
+			<div>
+				Володимир&nbspШатинський
+			</div>
 		</header>
 
 		<div id="left">
@@ -59,7 +59,10 @@
 				$projects = [240, 130, 50, 250, 150, 40, 60, 200, 220, 70, 100, 80];
 				for ($i = 0; $i <= count($projects) - 1; $i++) {
 					echo '<div class="card">
-					<a href="project.php?id=' . $projects[$i] . '"><img src="projects/' . $projects[$i] . '/z1.jpg"></a>
+					<a href="project.php?id=' . $projects[$i] . '">
+					<img src="projects/' . $projects[$i] . '/z1.jpg">
+					<div style="background-color: white; width: 100%; padding: 4px 16px; font-size: 14px;">Флюгер</div>
+					</a>
 					</div>';
 				}
 				?>
