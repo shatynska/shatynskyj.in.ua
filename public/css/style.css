@@ -17,7 +17,12 @@ header {
   display: flex;
   flex-direction: column;
   gap: 32px;
-  background-color: rgba(63, 67, 70, 1);
+  background-image: linear-gradient(
+      to bottom,
+      rgba(36, 37, 41, 1),
+      rgba(64, 62, 63, 0.7)
+    ),
+    url("../images/steel-fon.jpg");
   color: rgba(255, 255, 255, 1);
   text-align: center;
 }
