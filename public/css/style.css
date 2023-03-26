@@ -94,11 +94,12 @@ h1 {
   background-color: rgba(194, 195, 197, 1);
   color: rgba(28, 28, 28, 1);
   margin-top: 40px;
-  padding: 40px 20px;
+  padding: 60px 40px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  gap: 40px 10px;
+  gap: 60px 32px;
+  width: 512px;
 }
 .line {
   position: relative;
@@ -109,7 +110,7 @@ h1 {
 }
 
 .card {
-  max-width: 220px;
+  width: 200px;
 }
 .card img {
   filter: grayscale(40%);
