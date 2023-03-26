@@ -58,12 +58,15 @@
 				<?
 				$projects = [240, 130, 50, 250, 150, 40, 60, 200, 220, 70, 100, 80];
 				for ($i = 0; $i <= count($projects) - 1; $i++) {
-					echo '<div class="card">
-					<a href="project.php?id=' . $projects[$i] . '">
-					<img src="projects/' . $projects[$i] . '/z1.jpg">
-					<div style="background-color: white; width: 100%; padding: 4px 16px; font-size: 14px;">Флюгер</div>
-					</a>
-					</div>';
+					echo '
+						<a href="project.php?id=' . $projects[$i] . '">
+						<figure>
+					    <img src="projects/' . $projects[$i] . '/z1.jpg"
+         				alt="Elephant at sunset">
+    					<figcaption>Флюгер</figcaption>
+						</figure>
+						</a>
+					';
 				}
 				?>
 			</div>
@@ -75,9 +78,14 @@
 				<?
 				$projects = [20, 30, 140, 120, 210, 160, 170, 180, 230, 190, 110, 90];
 				for ($i = 0; $i <= count($projects) - 1; $i++) {
-					echo '<div class="card">
-					<a href="project.php?id=' . $projects[$i] . '"><img src="projects/' . $projects[$i] . '/z1.jpg"></a>
-					</div>';
+					echo '						<a href="project.php?id=' . $projects[$i] . '">
+						<figure>
+					    <img src="projects/' . $projects[$i] . '/z1.jpg"
+         				alt="Elephant at sunset">
+    					<figcaption>Флюгер</figcaption>
+						</figure>
+						</a>
+					';
 				}
 				?>
 			</div>
