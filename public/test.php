@@ -1,3 +1,12 @@
+<?php
+
+require_once('projects.php');
+
+$leftProjects = [240, 130, 50, 250, 150, 40, 60, 200, 220, 70, 100, 80];
+$rightProjects = [20, 30, 140, 120, 210, 160, 170, 180, 230, 190, 110, 90];
+
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -11,7 +20,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Manrope&family=Russo+One&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/style.css">
 </head>
- 
+
 <body>
 	<div class="container">
 
@@ -31,7 +40,6 @@
 				флюгера, шпилі
 				та&nbspінші ковані вироби
 			</div>
-
 
 			<address>
 				<div>
@@ -56,39 +64,14 @@
 		<div id="left">
 			<div class="line"></div>
 			<div class="main">
-				<?
-				$projects = [240, 130, 50, 250, 150, 40, 60, 200, 220, 70, 100, 80];
-				for ($i = 0; $i <= count($projects) - 1; $i++) {
-					echo '
-						<a href="project.php?id=' . $projects[$i] . '">
-						<figure>
-					    <img src="projects/' . $projects[$i] . '/z1.jpg"
-         				alt="Elephant at sunset">
-    					<figcaption>Флюгер</figcaption>
-						</figure>
-						</a>
-					';
-				}
-				?>
+				<?php renderProjects($leftProjects); ?>
 			</div>
 		</div>
 
 		<div id="right">
 			<div class="line"></div>
 			<div class="main">
-				<?
-				$projects = [20, 30, 140, 120, 210, 160, 170, 180, 230, 190, 110, 90];
-				for ($i = 0; $i <= count($projects) - 1; $i++) {
-					echo '						<a href="project.php?id=' . $projects[$i] . '">
-						<figure>
-					    <img src="projects/' . $projects[$i] . '/z1.jpg"
-         				alt="Elephant at sunset">
-    					<figcaption>Флюгер</figcaption>
-						</figure>
-						</a>
-					';
-				}
-				?>
+				<?php renderProjects($rightProjects); ?>
 			</div>
 		</div>
 
