@@ -75,10 +75,10 @@ $rightProjects = [20, 30, 140, 120, 210, 160, 170, 180, 230, 190, 110, 90];
 			</div>
 		</div>
 
-		<footer>
-		</footer>
-
 	</div>
+
+	<footer>
+	</footer>
 
 </body>
 
