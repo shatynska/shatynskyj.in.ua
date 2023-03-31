@@ -41,11 +41,15 @@ $rightProjects = [20, 30, 140, 120, 210, 160, 170, 180, 230, 190, 110, 90];
 				та&nbspінші ковані вироби
 			</div>
 
+			<h1>
+				<a href="tel:+380689611663" id="tel">
+					068 961 16 63
+				</a>
+			</h1>
+
 			<address>
 				<div>
-					<a href="tel:+380689611663" id="tel">
-						+380689611663
-					</a>
+					Володимир&nbspШатинський
 				</div>
 				<div>
 					<a href="mailto:shatynskyj@gmail.com">
@@ -56,9 +60,6 @@ $rightProjects = [20, 30, 140, 120, 210, 160, 170, 180, 230, 190, 110, 90];
 					м.&nbspДрогобич
 				</div>
 			</address>
-			<div>
-				Володимир&nbspШатинський
-			</div>
 		</header>
 
 		<div id="left">
