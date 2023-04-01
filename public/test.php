@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 require_once('projects.php');
 
 $leftProjects = [240, 130, 50, 250, 150, 40, 60, 200, 220, 70, 100, 80];
