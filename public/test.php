@@ -2,10 +2,7 @@
 
 declare(strict_types=1);
 
-require_once('projects.php');
-
-$leftProjects = [240, 130, 50, 250, 150, 40, 60, 200, 220, 70, 100, 80];
-$rightProjects = [20, 30, 140, 120, 210, 160, 170, 180, 230, 190, 110, 90];
+require_once('../app.php');
 
 ?>
 
@@ -25,6 +22,7 @@ $rightProjects = [20, 30, 140, 120, 210, 160, 170, 180, 230, 190, 110, 90];
 
 <body>
 	<div class="container">
+
 
 		<div id="top">
 		</div>
