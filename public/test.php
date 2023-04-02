@@ -23,7 +23,6 @@ require_once('../app.php');
 <body>
 	<div class="container">
 
-
 		<div id="top">
 		</div>
 
@@ -65,14 +64,14 @@ require_once('../app.php');
 		<div id="left">
 			<div class="line"></div>
 			<div class="main">
-				<?php renderProjects($leftProjects); ?>
+				<?php renderProjects($db, 4, 0); ?>
 			</div>
 		</div>
 
 		<div id="right">
 			<div class="line"></div>
 			<div class="main">
-				<?php renderProjects($rightProjects); ?>
+				<?php renderProjects($db, 4, 4); ?>
 			</div>
 		</div>
 
