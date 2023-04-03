@@ -64,14 +64,14 @@ require_once('../app.php');
 		<div id="left">
 			<div class="line"></div>
 			<div class="main">
-				<?php renderProjects($db, 4, 0); ?>
+				<?php renderProjects($db, 4, 0, true); ?>
 			</div>
 		</div>
 
 		<div id="right">
 			<div class="line"></div>
 			<div class="main">
-				<?php renderProjects($db, 4, 4); ?>
+				<?php renderProjects($db, 4, 4, true); ?>
 			</div>
 		</div>
 
