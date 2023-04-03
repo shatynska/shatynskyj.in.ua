@@ -7,7 +7,7 @@ $db = new SQLite3($database_name);
 
 function renderProjects($db, $limit, $offset, bool $figcaption): void
 {
-    $query = "SELECT * FROM projects LIMIT $limit OFFSET $offset";
+    $query = "SELECT id, title, place FROM projects LIMIT $limit OFFSET $offset";
     $results = $db->query($query);
 
     while ($row = $results->fetchArray()) {
@@ -28,6 +28,26 @@ function renderProjects($db, $limit, $offset, bool $figcaption): void
         echo '
         </figure>
         </a>
+        ';
+    }
+}
+
+
+function renderText($db, $id): void
+{
+    $query = "SELECT title, text FROM texts WHERE id = $id";
+    $results = $db->query($query);
+
+    while ($row = $results->fetchArray()) {
+        echo '
+        <div>
+        <h3>
+        ' . $row["title"] . '
+        </h3>
+        <div>
+        ' . $row["text"] . '
+        </div>
+        </div>
         ';
     }
 }
