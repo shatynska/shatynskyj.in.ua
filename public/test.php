@@ -21,6 +21,7 @@ require_once('../app.php');
 </head>
 
 <body>
+	
 	<div class="container">
 
 		<div id="top">
@@ -75,10 +76,10 @@ require_once('../app.php');
 			</div>
 		</div>
 
-	</div>
+		<footer>
+		</footer>
 
-	<footer>
-	</footer>
+	</div>
 
 </body>
 
