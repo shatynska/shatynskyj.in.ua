@@ -18,7 +18,13 @@ header {
   top: 0;
   height: 880px;
   padding: 20px;
-  background-image: linear-gradient(      to bottom,      rgba(22, 23, 27, 0.9) 0%,      rgba(37, 37, 41, 0.4) 50%,      rgba(14, 15, 19, 0.9) 100%    ),    url("../images/steel-fon.jpg");
+  background-image: linear-gradient(
+      to bottom,
+      rgba(22, 23, 27, 0.9) 0%,
+      rgba(37, 37, 41, 0.4) 50%,
+      rgba(14, 15, 19, 0.9) 100%
+    ),
+    url("../images/steel-fon.jpg");
   text-align: center;
   color: rgba(255, 255, 255, 1);
   gap: 40px;
@@ -33,7 +39,7 @@ header address {
 footer {
   grid-area: footer;
   height: 340px;
-  background: no-repeat bottom right url("../images/sky-fon.jpg");
+  background: no-repeat bottom center url("../images/sky-fon.jpg");
   transform: rotate(180deg);
 }
 
@@ -49,10 +55,9 @@ h1 {
 
 .container {
   display: grid;
-  grid-template-areas:    "top top top"    "left header right"    "footer footer footer";
+  grid-template-areas: "top top top" "left header right" "footer footer footer";
   grid-template-columns: 1fr 232px 1fr;
   grid-template-rows: 340px 1fr 340px;
-  max-width: 1374px;
   min-height: 100vh;
   margin: 0 auto;
 }
@@ -80,11 +85,11 @@ h1 {
 }
 
 #left .main {
-  margin-left: 60px;
+  margin-left: 40px;
 }
 
 #right .main {
-  margin-right: 60px;
+  margin-right: 40px;
 }
 
 .main {
@@ -102,7 +107,7 @@ h1 {
 
 .line {
   width: 100%;
-  height: 20px;
+  height: 16px;
   margin-top: 32px;
   background-color: rgba(222, 223, 225, 1);
 }
