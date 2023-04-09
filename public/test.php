@@ -25,7 +25,7 @@ require_once('../app.php');
 	<div class="container">
 
 		<header>
-			<div id="company_title">
+			<div id="company-title">
 				СТАЛЕВЕ НЕБО
 			</div>
 
@@ -58,20 +58,26 @@ require_once('../app.php');
 				</div>
 			</address>
 		</header>
+		
+		<!-- <div class="line"></div> -->
+		<div id="first-half-of-line" class="line"></div>
+		<div id="second-half-of-line" class="line"></div>
 
-		<div id="left">
-			<div class="line"></div>
-			<div class="main">
-				<?php renderProjects($db, 4, 0, true); ?>
-			</div>
-		</div>
+		<section id="first-half-of-selected-projects" class="first-half">
+			<?php renderProjects($db, 4, 0, true); ?>
+		</section>
 
-		<div id="right">
-			<div class="line"></div>
-			<div class="main">
-				<?php renderProjects($db, 4, 4, true); ?>
-			</div>
-		</div>
+		<section id="second-half-of-selected-projects" class="second-half">
+			<?php renderProjects($db, 4, 4, true); ?>
+		</section>
+
+		<section id="first-half-of-other-projects" class="first-half">
+			<?php renderProjects($db, 2, 2, false); ?>
+		</section>
+		
+		<section id="second-half-of-other-projects" class="second-half">
+			<?php renderProjects($db, 4, 4, false); ?>
+		</section>
 
 		<footer>
 		</footer>
