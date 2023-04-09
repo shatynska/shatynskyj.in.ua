@@ -24,9 +24,6 @@ require_once('../app.php');
 	
 	<div class="container">
 
-		<div id="top">
-		</div>
-
 		<header>
 			<div id="company_title">
 				СТАЛЕВЕ НЕБО
