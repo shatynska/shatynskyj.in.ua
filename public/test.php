@@ -59,7 +59,6 @@ require_once('../app.php');
 			</address>
 		</header>
 		
-		<!-- <div class="line"></div> -->
 		<div id="first-half-of-line" class="line"></div>
 		<div id="second-half-of-line" class="line"></div>
 
