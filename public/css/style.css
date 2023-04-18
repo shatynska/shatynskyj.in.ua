@@ -107,7 +107,14 @@ section figcaption {
   display: none;
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 768px) {
+  section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 844px) {
   .container {
     grid-template-areas:
       "first-half-of-line header second-half-of-line "
@@ -117,7 +124,15 @@ section figcaption {
       "footer footer footer";
     grid-template-columns: 1fr 232px 1fr;
     grid-template-rows: 80px auto auto 32px 340px;
-    width: 1374px;
+  }
+
+  footer {
+    background-position: bottom center;
+  }
+
+  section {
+    grid-template-columns: 1fr;
+    width: auto;
   }
 
   header {
@@ -135,10 +150,8 @@ section figcaption {
       url("../images/steel-fon.jpg");
   }
 
-  section {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    width: 512px;
+  footer {
+    background-position: bottom right;
   }
 
   section figure img {
@@ -161,5 +174,12 @@ section figcaption {
     height: 16px;
     margin-top: 32px;
     background-color: rgba(222, 223, 225, 1);
+  }
+}
+
+@media (min-width: 1280px) {
+  section {
+    grid-template-columns: 1fr 1fr;
+    width: 512px;
   }
 }
