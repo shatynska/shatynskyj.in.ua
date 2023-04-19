@@ -1,6 +1,7 @@
 @import url("reset.css");
 
 body {
+  min-width: 320px;
   max-width: 1374px;
   margin: 0 auto;
   background-color: rgba(20, 20, 20, 1);
@@ -69,13 +70,14 @@ section {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   justify-content: center;
+  align-items: start;
   padding: 0 24px;
   background-color: rgba(194, 195, 197, 1);
   color: rgb(0, 0, 0);
 }
 
-section figure {
-  padding: 60px 16px 0;
+section a {
+  margin: 60px 16px 0;
 }
 
 section figcaption {
@@ -112,7 +114,6 @@ section figcaption {
   background-color: rgba(222, 223, 225, 1);
 }
 
-
 @media (min-width: 844px) {
   .container {
     grid-template-areas:
@@ -141,7 +142,7 @@ section figcaption {
   }
 
   section {
-    grid-template-columns: repeat(auto-fit, minmax(232px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(222px, 1fr));
   }
 
   section figure img {
@@ -155,8 +156,11 @@ section figcaption {
   .line {
     display: block;
   }
-}
 
+  #first-half-of-other-projects {
+    padding-bottom: 60px;
+  }
+}
 
 @media (min-width: 1280px) {
   section {
