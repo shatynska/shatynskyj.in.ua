@@ -70,14 +70,14 @@ section {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   justify-content: center;
-  align-items: start;
   padding: 0 24px;
   background-color: rgba(194, 195, 197, 1);
   color: rgb(0, 0, 0);
 }
 
-section a {
+section figure {
   margin: 60px 16px 0;
+  cursor: pointer;
 }
 
 section figcaption {
@@ -147,6 +147,10 @@ section figcaption {
 
   section figure img {
     filter: grayscale(50%);
+  }
+
+  section figure img:hover {
+    filter: grayscale(0%);
   }
 
   .first-half {

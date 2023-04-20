@@ -18,6 +18,7 @@ require_once('../app.php');
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Manrope&family=Russo+One&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/style.css">
+	<script defer src="js/gallery.js"></script>
 </head>
 
 <body>

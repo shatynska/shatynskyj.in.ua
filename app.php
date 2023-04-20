@@ -12,7 +12,6 @@ function renderProjects($db, $limit, $offset, bool $figcaption): void
 
     while ($row = $results->fetchArray()) {
         echo '
-        <a href="project.php?id=' . $row["id"] . '">
         <figure>
         <img src="/images/projects/' . $row["id"] . '/title.jpg" alt="">
         ';
@@ -27,7 +26,6 @@ function renderProjects($db, $limit, $offset, bool $figcaption): void
         }
         echo '
         </figure>
-        </a>
         ';
     }
 }
