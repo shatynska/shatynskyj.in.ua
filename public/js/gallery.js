@@ -15,12 +15,15 @@ let imageModal = (src) => {
   modal.setAttribute("class", "modal");
   document.querySelector(".container").append(modal);
 
-  const newImage = document.createElement("img");
-  newImage.setAttribute("src", src);
+  const bigImage = document.createElement("img");
+  bigImage.setAttribute("class", "big-image");
+  bigImage.setAttribute("src", src);
+
+  const thumbImages = document.createElement("div");
 
   //creating the close button
   const closeButton = document.createElement("div");
-  closeButton.setAttribute("class", "closeButton");
+  closeButton.setAttribute("class", "close-button");
   closeButton.innerText = "x";
 
   //close functions
@@ -34,5 +37,5 @@ let imageModal = (src) => {
     }
   });
 
-  modal.append(newImage, closeButton);
+  modal.append(bigImage, closeButton);
 };

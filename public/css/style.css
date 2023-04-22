@@ -137,12 +137,12 @@ section figcaption {
   }
 }
 
-.modal img {
+.big-image {
   height: 80vh;
   object-fit: cover;
 }
 
-.closeButton {
+.close-button {
   position: absolute;
   right: 0;
   top: 0;
@@ -153,7 +153,7 @@ section figcaption {
   cursor: pointer;
 }
 
-.closeButton:hover {
+.close-button:hover {
   color: rgba(0, 0, 0, 1);
 }
 
