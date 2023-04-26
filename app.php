@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 $database_name = "../database.db";
-$db = new SQLite3($database_name);
+$db = new SQLite3($database_name) or die('Unable to open database');
 
 function renderProjects($db, $limit, $offset, bool $figcaption): void
 {
@@ -13,7 +13,7 @@ function renderProjects($db, $limit, $offset, bool $figcaption): void
     while ($row = $results->fetchArray()) {
         echo '
         <figure>
-        <img src="/images/projects/' . $row["id"] . '/title.jpg" alt="">
+        <img src="/images/projects/' . $row["id"] . '/0.jpg" alt="">
         ';
         if ($figcaption == true) {
             echo '
