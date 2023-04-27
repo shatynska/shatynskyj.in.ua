@@ -7,13 +7,13 @@ $db = new SQLite3($database_name) or die('Unable to open database');
 
 function renderProjects($db, $limit, $offset, bool $figcaption): void
 {
-    $query = "SELECT id, title, place FROM projects LIMIT $limit OFFSET $offset";
+    $query = "SELECT id, title, place, number_of_images FROM projects LIMIT $limit OFFSET $offset";
     $results = $db->query($query);
 
     while ($row = $results->fetchArray()) {
         echo '
         <figure>
-        <img src="/images/projects/' . $row["id"] . '/0.jpg" alt="">
+        <img src="/images/projects/' . $row["id"] . '/0.jpg" alt="" number="' . $row["number_of_images"] . '" id="' . $row["id"] . '">
         ';
         if ($figcaption == true) {
             echo '
