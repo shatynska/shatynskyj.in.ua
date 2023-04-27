@@ -21,6 +21,13 @@ let imageModal = (projectId, numberOfImages) => {
   bigImage.setAttribute("src", `/images/projects/${projectId}/0.jpg`);
 
   const thumbImages = document.createElement("div");
+  thumbImages.setAttribute("class", "thumb-images");
+  for (i = 0; i <= numberOfImages; i++) {
+    const thumbImage = document.createElement("img");
+    thumbImage.setAttribute("class", "thumb-image");
+    thumbImage.setAttribute("src", `/images/projects/${projectId}/${i}.jpg`);
+    thumbImages.append(thumbImage);
+  }
 
   //creating the close button
   const closeButton = document.createElement("div");
@@ -38,5 +45,5 @@ let imageModal = (projectId, numberOfImages) => {
     }
   });
 
-  modal.append(bigImage, closeButton);
+  modal.append(bigImage, thumbImages, closeButton);
 };

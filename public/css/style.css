@@ -116,6 +116,7 @@ section figcaption {
 
 .modal {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   position: fixed;
@@ -138,7 +139,18 @@ section figcaption {
 }
 
 .big-image {
-  height: 80vh;
+  height: 70vh;
+  object-fit: cover;
+}
+
+.thumb-images {
+  display: flex;
+  margin-top: 2rem;
+  gap: 1rem;
+}
+
+.thumb-image {
+  height: 16vh;
   object-fit: cover;
 }
 
