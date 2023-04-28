@@ -72,11 +72,11 @@ require_once('../app.php');
 		</section>
 
 		<section id="first-half-of-other-projects" class="first-half">
-			<?php renderProjects($db, 2, 2, false); ?>
+			<?php renderProjects($db, 8, 8, false); ?>
 		</section>
 		
 		<section id="second-half-of-other-projects" class="second-half">
-			<?php renderProjects($db, 4, 4, false); ?>
+			<?php renderProjects($db, 8, 16, false); ?>
 		</section>
 
 		<footer>
