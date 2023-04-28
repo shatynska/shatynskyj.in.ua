@@ -71,6 +71,14 @@ require_once('../app.php');
 			<?php renderProjects($db, 4, 4, true); ?>
 		</section>
 
+		<section id="first-text" class="first-half">
+			<?php renderText($db, 1); ?>
+		</section>
+		
+		<section id="second-text" class="second-half">
+			<?php renderText($db, 2); ?>
+		</section>
+
 		<section id="first-half-of-other-projects" class="first-half">
 			<?php renderProjects($db, 8, 8, false); ?>
 		</section>

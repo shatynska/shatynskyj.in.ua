@@ -48,12 +48,14 @@ footer {
     "header"
     "first-half-of-selected-projects"
     "second-half-of-selected-projects"
+    "first-text"
+    "second-text"
     "first-half-of-other-projects"
     "second-half-of-other-projects"
     "."
     "footer";
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(5, auto) 3.75rem 340px;
+  grid-template-rows: repeat(7, auto) 3.75rem 340px;
   margin: 0 auto;
   padding-top: 340px;
   background: url("../images/sky-fon.jpg") top center no-repeat;
@@ -179,11 +181,12 @@ section figcaption {
     grid-template-areas:
       "first-half-of-line header second-half-of-line "
       "first-half-of-selected-projects header second-half-of-selected-projects "
+      "first-text header second-text "
       "first-half-of-other-projects header second-half-of-other-projects "
       ". header ."
       "footer footer footer";
     grid-template-columns: 1fr 232px 1fr;
-    grid-template-rows: 80px auto auto 32px 340px;
+    grid-template-rows: 80px auto auto auto 32px 340px;
   }
 
   header {
