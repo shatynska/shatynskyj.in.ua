@@ -17,22 +17,28 @@ let imageModal = (projectId, numberOfImages) => {
   document.querySelector(".container").append(modal);
 
   const bigImage = document.createElement("img");
-  bigImage.setAttribute("class", "big-image");
+  bigImage.setAttribute("id", "big-image");
   bigImage.setAttribute("src", `/images/projects/${projectId}/0.jpg`);
+  modal.append(bigImage);
 
-  const thumbImages = document.createElement("div");
-  thumbImages.setAttribute("class", "thumb-images");
+  const containerOfThumbnails = document.createElement("div");
+  containerOfThumbnails.setAttribute("id", "container-of-thumbnails");
   for (i = 0; i <= numberOfImages; i++) {
-    const thumbImage = document.createElement("img");
-    thumbImage.setAttribute("class", "thumb-image");
-    thumbImage.setAttribute("src", `/images/projects/${projectId}/${i}.jpg`);
-    thumbImages.append(thumbImage);
+    let thumbnail = document.createElement("img");
+    thumbnail.setAttribute("class", "thumbnail");
+    thumbnail.setAttribute("src", `/images/projects/${projectId}/${i}.jpg`);
+    containerOfThumbnails.append(thumbnail);
+    thumbnail.onclick = () => {
+      bigImage.setAttribute("src", thumbnail.src);
+    };
   }
+  modal.append(containerOfThumbnails);
 
   //creating the close button
   const closeButton = document.createElement("div");
   closeButton.setAttribute("class", "close-button");
   closeButton.innerText = "x";
+  modal.append(closeButton);
 
   //close functions
   closeButton.onclick = () => {
@@ -44,6 +50,4 @@ let imageModal = (projectId, numberOfImages) => {
       modal.remove();
     }
   });
-
-  modal.append(bigImage, thumbImages, closeButton);
 };

@@ -77,6 +77,9 @@ section {
 
 section figure {
   margin: 60px 16px 0;
+}
+
+section figure img {
   cursor: pointer;
 }
 
@@ -138,25 +141,28 @@ section figcaption {
   }
 }
 
-.big-image {
+#big-image {
   height: 70vh;
-  object-fit: cover;
+  object-fit: scale-down;
 }
 
-.thumb-images {
+#container-of-thumbnails {
   display: flex;
-  margin-top: 2rem;
+  margin-top: 1vh;
+  padding: 1vh 0;
   gap: 1rem;
+  overflow: auto;
 }
 
-.thumb-image {
+.thumbnail {
   height: 16vh;
-  object-fit: cover;
+  object-fit: scale-down;
+  cursor: pointer;
 }
 
 .close-button {
   position: absolute;
-  right: 0;
+  right: 20px;
   top: 0;
   padding: 20px;
   font-size: 40px;
