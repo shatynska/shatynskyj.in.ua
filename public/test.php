@@ -41,17 +41,17 @@ require_once('../app.php');
 
 			<h1>
 				<a href="tel:+380689611663" id="tel">
-					068 961 16 63
+					068 96 11 663
 				</a>
 			</h1>
 
 			<address>
 				<div>
-					Володимир&nbspШатинський
+					Володимир Шатинський
 				</div>
 				<div>
 					<a href="mailto:shatynskyj@gmail.com">
-						shatynskyj@gmail.com
+						shatynskyj&shy;@gmail.com
 					</a>
 				</div>
 				<div>
