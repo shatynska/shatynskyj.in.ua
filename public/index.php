@@ -1,31 +1,97 @@
-<?
-include_once('begin.php');
+<?php
 
-if (isset($_GET['id']) && $_GET['id']!='') {
-	echo '<nav><a href="/">на головну</a></nav>';
-		$path="/projects";
-		$dir = opendir($path);
-		if((readdir($dir))!== false) {
-			foreach (scandir('projects/'.$_GET['id'].'/') as $v)
-		{
-			if ($v == '.' || $v == '..') continue;
-			echo '<img src="projects/'.$_GET['id'].'/'.$v.'">';
-		}
-		closedir($dir);
-	}
-}
-else {
-	echo '<div class="row">';
-	$projects = [240, 20, 130, 30, 50, 140, 250, 120, 150, 210, 40, 160, 60, 170, 200, 180, 220, 230, 70, 190, 100, 110, 80, 90];
-	for ($i=0; $i<=count($projects)-1; $i++ ) {
-		echo '<div class="col-12 col-sm-6 col-md-4 my-2">
-			<a href="project.php?id='.$projects[$i].'"><img src="projects/'.$projects[$i].'/z1.jpg" class="img-fluid"></a>
-		</div>';
-	}
-	echo '</div>';
-}
+declare(strict_types=1);
 
-include_once('end.php');
+require_once('../app.php');
 
 ?>
 
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Художня ковка: флюгера, шпилі, ворота, огорожі та інші ковані вироби. Замовити в Дрогобичі.</title>
+	<meta name="description" content="Виготовлення на замовлення кованих скульптур та інших виробів з металу, зокрема флюгерів та шпилів. Художня обробка металу. &#9743; 8 (068) 961 16 63. Дрогобич" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Manrope&family=Russo+One&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+	<script defer src="js/gallery.js"></script>
+</head>
+
+<body>
+	
+	<div class="container">
+
+		<header>
+			<div id="company-title">
+				СТАЛЕВЕ НЕБО
+			</div>
+
+			<h1>
+				художня ковка
+			</h1>
+
+			<div>
+				флюгера, шпилі
+				та&nbspінші ковані вироби
+			</div>
+
+			<h1>
+				<a href="tel:+380689611663" id="tel">
+					068 96 11 663
+				</a>
+			</h1>
+
+			<address>
+				<div>
+					Володимир Шатинський
+				</div>
+				<div>
+					<a href="mailto:shatynskyj@gmail.com">
+						shatynskyj&shy;@gmail.com
+					</a>
+				</div>
+				<div>
+					м.&nbspДрогобич
+				</div>
+			</address>
+		</header>
+		
+		<div id="first-half-of-line" class="line"></div>
+		<div id="second-half-of-line" class="line"></div>
+
+		<section id="first-half-of-selected-projects" class="first-half">
+			<?php renderProjects($db, 4, 0, true); ?>
+		</section>
+
+		<section id="second-half-of-selected-projects" class="second-half">
+			<?php renderProjects($db, 4, 4, true); ?>
+		</section>
+
+		<section id="first-text" class="first-half">
+			<?php renderText($db, 1); ?>
+		</section>
+		
+		<section id="second-text" class="second-half">
+			<?php renderText($db, 2); ?>
+		</section>
+
+		<section id="first-half-of-other-projects" class="first-half">
+			<?php renderProjects($db, 8, 8, false); ?>
+		</section>
+		
+		<section id="second-half-of-other-projects" class="second-half">
+			<?php renderProjects($db, 8, 16, false); ?>
+		</section>
+
+		<footer>
+		</footer>
+
+	</div>
+
+</body>
+
+</html>
