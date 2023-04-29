@@ -110,6 +110,11 @@ section figcaption {
   padding-bottom: 3.75rem;
 }
 
+#first-text,
+#second-text {
+  padding: 60px 40px 0;
+}
+
 .line {
   display: none;
   width: 100%;
