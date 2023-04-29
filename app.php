@@ -13,7 +13,7 @@ function renderProjects($db, $limit, $offset, bool $figcaption): void
     while ($row = $results->fetchArray()) {
         echo '
         <figure>
-        <img src="/images/projects/' . $row["id"] . '/0.jpg" alt="" number="' . $row["number_of_images"] . '" id="' . $row["id"] . '">
+        <img src="/images/projects/' . $row["id"] . '/0.jpg" alt="' . $row["title"] . '" number="' . $row["number_of_images"] . '" id="' . $row["id"] . '">
         ';
         if ($figcaption == true) {
             echo '
