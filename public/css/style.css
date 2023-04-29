@@ -151,12 +151,11 @@ section figcaption {
 .modal > header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   position: sticky;
   top: 0;
   width: 100%;
   height: auto;
-  padding: 20px;
+  padding: 1rem;
   background-color: rgba(194, 195, 197, 1);
   font-weight: 700;
   color: rgba(20, 20, 20, 1);
@@ -173,7 +172,8 @@ section figcaption {
 }
 
 .close-button {
-  font-size: 2.5rem;
+  margin-left: auto;
+  font-size: 2rem;
   color: rgba(0, 0, 0, 0.8);
   transition: 0.2s ease-in-out;
   cursor: pointer;
