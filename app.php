@@ -19,7 +19,7 @@ function renderProjects($db, $limit, $offset, bool $figcaption): void
             echo '
             <figcaption>
             ' . $row["title"] . '
-            </br>
+            <br>
             ' . $row["place"] . '
             </figcaption>
             ';

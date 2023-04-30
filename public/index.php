@@ -7,7 +7,7 @@ require_once('../app.php');
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="uk-UA">
 
 <head>
 	<meta charset="utf-8">
@@ -36,7 +36,7 @@ require_once('../app.php');
 
 			<div>
 				флюгера, шпилі
-				та&nbspінші ковані вироби
+				та&nbsp;інші ковані вироби
 			</div>
 
 			<h1>
@@ -55,7 +55,7 @@ require_once('../app.php');
 					</a>
 				</div>
 				<div>
-					м.&nbspДрогобич
+					м.&nbsp;Дрогобич
 				</div>
 			</address>
 		</header>
@@ -87,7 +87,7 @@ require_once('../app.php');
 			<?php renderProjects($db, 8, 16, false); ?>
 		</section>
 
-		<footer>
+		<footer>	
 		</footer>
 
 	</div>
