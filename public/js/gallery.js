@@ -23,9 +23,9 @@ let imageModal = (projectId, projectTitle, numberOfImages) => {
   modalTitle.innerText = projectTitle;
   modalHeader.append(projectTitle);
 
-  const closeButton = document.createElement("div");
+  const closeButton = document.createElement("img");
   closeButton.setAttribute("class", "close-button");
-  closeButton.innerText = "x";
+  closeButton.setAttribute("src", `/images/close.png`);
   modalHeader.append(closeButton);
 
   closeButton.onclick = () => {

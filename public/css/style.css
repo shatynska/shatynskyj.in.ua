@@ -154,6 +154,7 @@ section figcaption {
   position: sticky;
   top: 0;
   width: 100%;
+  max-width: 1214px;
   height: auto;
   padding: 1rem;
   background-color: rgba(194, 195, 197, 1);
@@ -173,8 +174,6 @@ section figcaption {
 
 .close-button {
   margin-left: auto;
-  font-size: 2rem;
-  color: rgba(0, 0, 0, 0.8);
   transition: 0.2s ease-in-out;
   cursor: pointer;
 }
