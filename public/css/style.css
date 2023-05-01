@@ -25,7 +25,6 @@ h1 {
   grid-area: header;
   padding: 3.75rem 0;
   text-align: center;
-  color: rgba(255, 255, 255, 1);
   gap: 2.5rem;
 }
 
@@ -37,6 +36,17 @@ header address {
 
 footer {
   grid-area: footer;
+}
+
+footer .contact {
+  display: flex;
+  flex-direction: column;
+  padding: 3.75rem 0;
+  text-align: center;
+  gap: 2.5rem;
+}
+
+footer .image {
   height: 340px;
   background: no-repeat bottom center url("../images/sky-fon.jpg");
   transform: rotate(180deg);
@@ -55,7 +65,7 @@ footer {
     "."
     "footer";
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(7, auto) 3.75rem 340px;
+  grid-template-rows: repeat(7, auto) auto;
   margin: 0 auto;
   padding-top: 340px;
   background: url("../images/sky-fon.jpg") top center no-repeat;
@@ -183,6 +193,10 @@ section figcaption {
 }
 
 @media (min-width: 844px) {
+  footer .contact {
+    display: none;
+  }
+
   .container {
     grid-template-areas:
       "first-half-of-line header second-half-of-line "

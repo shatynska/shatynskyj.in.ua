@@ -106,7 +106,20 @@ require_once('../app.php');
 			<?php renderProjects($db, 8, 16, false); ?>
 		</section>
 
-		<footer>	
+		<footer>
+			<div class="contact">	
+			<h1>
+				<a href="tel:+380689611663" id="tel">
+					068 96 11 663
+				</a>
+			</h1>
+			<div>
+				<a href="mailto:shatynskyj@gmail.com">
+					shatynskyj&shy;@gmail.com
+				</a>
+			</div>	
+			</div>	
+			<div class="image"></div>	
 		</footer>
 
 	</div>
